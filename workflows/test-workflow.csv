@@ -1,0 +1,55 @@
+# Declaring Tasks
+#   Task,<id>,<duration-in-seconds>,<memory_peak>
+Task,t1,60,100
+Task,t2,60,100
+Task,t3,60,100
+Task,t4,60,100
+Task,t5,60,100
+Task,t6,60,100
+Task,t7,60,100
+Task,t8,60,100
+
+# Declaring Files
+#   File,<id>,<size-in-kb>
+File,i1,70
+File,o1,10
+File,o2,10
+File,o3,20
+File,o4,10
+File,o5,20
+File,o6,10
+File,o7,10
+File,o8,20
+
+# Relating Files to Tasks
+#   Uses,<task-id>,<file-id>,<link>
+Uses,t1,i1,input
+Uses,t1,o1,output
+Uses,t2,o1,input
+Uses,t2,o2,output
+Uses,t3,o1,input
+Uses,t3,o3,output
+Uses,t4,o1,input
+Uses,t4,o4,output
+Uses,t5,o2,input
+Uses,t5,o5,output
+Uses,t6,o3,input
+Uses,t6,o6,output
+Uses,t7,o4,input
+Uses,t7,o7,output
+Uses,t8,o5,input
+Uses,t8,o6,input
+Uses,t8,o7,input
+Uses,t8,o8,output
+
+# Tasks Dependency
+#   Depends,<child-task-id>,<parent-task-id>
+Depends,t2,t1
+Depends,t3,t1
+Depends,t4,t1
+Depends,t5,t2
+Depends,t6,t3
+Depends,t7,t4
+Depends,t8,t5
+Depends,t8,t6
+Depends,t8,t7
