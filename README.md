@@ -7,3 +7,5 @@ Currently, PID configurations should be performed into the `pid_scheduler.py` fi
 ```
   $ python simulator.py <workflow-file.csv> [--no-pid]`
 ```
+
+the `--no-pid` option disables the use of PID controllers.
